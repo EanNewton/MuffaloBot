@@ -1,5 +1,7 @@
 # MuffaloBot
 
+Base fork of project, porting to Python 3.
+
 This is the source code for a bot hosted on the RimWorld Discord. 
 
 
