@@ -124,6 +124,16 @@ def check_isimmortal(query: str) -> str:
     banner = None
     return banner
 
+#
+# [Command("isimmortal"), RequireOwner, Hidden]
+# public
+# Task
+# IsImmortalAsync(CommandContext
+# ctx)
+# {
+# return ctx.RespondAsync(Environment.GetCommandLineArgs().Any(s= > s == "-immortal").ToString());
+# }
+
 
 def self_update(query: str) -> str:
     """
