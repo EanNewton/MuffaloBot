@@ -1,0 +1,6 @@
+If someone is around who can help, it's better if they can see the full question.
+So, instead of,
+```Is someone around who can help me```
+ask,
+```How do I reference my custom class in xml ?```
+This gets you a response faster and prevents wasting time.
