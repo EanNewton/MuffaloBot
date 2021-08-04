@@ -7,10 +7,11 @@ __author__ = "EanNewton"
 __version__ = "0.1.0"
 __license__ = "AGPL-3.0"
 
-
 import argparse
-from logzero import logger
 from os import path
+
+from logzero import logger
+
 from MuffaloBot import mbutil
 from MuffaloBot.Data import constants
 
@@ -116,6 +117,7 @@ def fetch_roleid(query: str) -> str:
     banner = None
     return banner
 
+
 def check_isimmortal(query: str) -> str:
     """
     Query the workshop by string.
@@ -123,6 +125,7 @@ def check_isimmortal(query: str) -> str:
     """
     banner = None
     return banner
+
 
 #
 # [Command("isimmortal"), RequireOwner, Hidden]
@@ -153,4 +156,3 @@ def self_restart(query: str) -> str:
     """
     banner = None
     return banner
-

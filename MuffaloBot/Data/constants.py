@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 from os import path, getenv
+
 from dotenv import load_dotenv
 from googletrans.constants import LANGCODES
-
 
 ##################
 # File Locations #
@@ -19,6 +19,7 @@ TOKEN = getenv('DISCORD_TOKEN')
 POC_TOKEN = getenv('POC_TOKEN')
 GUILD = getenv('DISCORD_GUILD')
 WOLFRAM = getenv('WOLFRAM_TOKEN')
+STEAM_TOKEN = getenv('STEAM_TOKEN')
 VERSION = '06.19.2021'
 LICENSE = "AGPL-3.0"
 LICENSE_URL = "https://opensource.org/licenses/AGPL-3.0"
@@ -33,6 +34,10 @@ VERBOSE = 1
 #################################
 # combine all 2 letter codes and fully qualified names into flat list from a dict()
 LANGCODES = [each for tuple_ in LANGCODES.items() for each in tuple_]
+ID_CODES = {
+    'rimworld': 294100,
+}
+
 DIVIDER = '<<>><<>><<>><<>><<>><<>><<>><<>><<>>\n'
 QUOTES_URL = 'https://raw.githubusercontent.com/spdskatr/MuffaloBot/master/MuffaloBot/Data/data.json'
 QUOTES_BASE = {

@@ -2,15 +2,15 @@
 
 Base fork of project, porting to Python 3.
 
-This is the source code for a bot hosted on the RimWorld Discord. 
-
-
+This is the source code for a bot hosted on the RimWorld Discord.
 
 ## How to self-host
 
-Open the project using Visual Studio. Create a new resources file under the `MuffaloBot` project called `AuthResources.resx`. 
+Open the project using Visual Studio. Create a new resources file under the `MuffaloBot` project
+called `AuthResources.resx`.
 
 Fill in the following fields:
+
 - `BotToken`: Your bot's token
 - `SteamApiKey`: The API key for interfacing with the [Steam API](http://steamcommunity.com/dev/apikey).
 

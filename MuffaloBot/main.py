@@ -8,6 +8,7 @@ __version__ = "0.1.0"
 __license__ = "AGPL-3.0"
 
 import argparse
+
 from logzero import logger
 
 

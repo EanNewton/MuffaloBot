@@ -8,8 +8,11 @@ __version__ = "0.1.0"
 __license__ = "AGPL-3.0"
 
 import argparse
+
 from logzero import logger
 from steam.client import SteamClient, cdn
+
+from ..Data import constants
 
 
 def wshopmod(query: str) -> str:
@@ -27,10 +30,10 @@ def wshopsearch(query: str) -> str:
     :type query: str
     """
     banner = None
-    print(id_RimWorld)
-    depot_info = SteamCDN_0.get_app_depot_info(id_RimWorld)
+    print(constants.ID_CODES['rimworld'])
+    depot_info = SteamCDN_0.get_app_depot_info(constants.ID_CODES['rimworld'])
     print(depot_info)
-    manifest = SteamCDN_0.get_manifests(id_RimWorld)
+    manifest = SteamCDN_0.get_manifests(constants.ID_CODES['rimworld'])
     # manifest = SteamCDN_0.get_manifest_for_workshop_item(id_RimWorld)
     print(manifest)
     return banner
@@ -41,11 +44,12 @@ def main(args=None):
     logger.info("hello world")
     if args:
         logger.info(args)
-    global SteamClient_0, SteamCDN_0, id_RimWorld
+    global SteamClient_0, SteamCDN_0
     SteamClient_0 = SteamClient()
     SteamCDN_0 = cdn.CDNClient(SteamClient_0)
-    id_RimWorld = 294100
     wshopsearch(None)
+
+
 # https://steamcommunity.com/app/294100/workshop/
 
 
@@ -81,4 +85,3 @@ if __name__ == "__main__":
         main(args)
     else:
         main()
-

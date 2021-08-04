@@ -1,9 +1,11 @@
 import functools
 import os
 from pathlib import Path
-import aiohttp
+
 import aiofiles
+import aiohttp
 import discord
+
 from MuffaloBot.Data.constants import VERBOSE, DEFAULT_DIR, PUBLIC_DIR, EXTSET
 
 
