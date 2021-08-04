@@ -1,0 +1,2 @@
+centralize config
+discord webhook

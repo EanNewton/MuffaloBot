@@ -1,35 +1,25 @@
-# using System.Collections.Generic;
-#
-# namespace MuffaloBot.Models
-# {
-#     public class Player
-#     {
-#         public string steamid { get; set; }
-#         public int communityvisibilitystate { get; set; }
-#         public int profilestate { get; set; }
-#         public string PersonaName { get; set; }
-#         public int commentpermission { get; set; }
-#         public string profileurl { get; set; }
-#         public string avatar { get; set; }
-#         public string avatarmedium { get; set; }
-#         public string avatarfull { get; set; }
-#         public int lastlogoff { get; set; }
-#         public int personastate { get; set; }
-#         public string primaryclanid { get; set; }
-#         public int timecreated { get; set; }
-#         public int personastateflags { get; set; }
-#         public string loccountrycode { get; set; }
-#         public string locstatecode { get; set; }
-#         public int loccityid { get; set; }
-#     }
-#
-#     public class Response
-#     {
-#         public List<Player> players { get; set; }
-#     }
-#
-#     public class UserModel
-#     {
-#         public Response response { get; set; }
-#     }
-# }
+#!/usr/bin/env python3
+"""
+
+"""
+
+
+class PublicUser:
+    def __init__(self, model: dict):
+        self.steamid = model['steamid']
+        self.community_visibility_state = model["community_visibility_state"]
+        self.profile_state =
+        self.persona_name =
+        self.comment_permissions =
+        self.profile_url =
+        self.avatar =
+        self.avatar_medium =
+        self.avatar_full =
+        self.last_logoff =
+        self.persona_state =
+        self.country_id =
+        self.state_id =
+        self.city_id =
+
+    def hello(self):
+        print('Hello, ', self.steamid)

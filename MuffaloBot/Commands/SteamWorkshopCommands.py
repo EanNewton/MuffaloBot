@@ -9,12 +9,44 @@ __license__ = "AGPL-3.0"
 
 import argparse
 from logzero import logger
+from steam.client import SteamClient, cdn
 
 
-def main(args):
+def wshopmod(query: str) -> str:
+    """
+    Query the workshop by fileid or url.
+    :type query: str
+    """
+    banner = None
+    return banner
+
+
+def wshopsearch(query: str) -> str:
+    """
+    Query the workshop by string.
+    :type query: str
+    """
+    banner = None
+    print(id_RimWorld)
+    depot_info = SteamCDN_0.get_app_depot_info(id_RimWorld)
+    print(depot_info)
+    manifest = SteamCDN_0.get_manifests(id_RimWorld)
+    # manifest = SteamCDN_0.get_manifest_for_workshop_item(id_RimWorld)
+    print(manifest)
+    return banner
+
+
+def main(args=None):
     """ Main entry point of the app """
     logger.info("hello world")
-    logger.info(args)
+    if args:
+        logger.info(args)
+    global SteamClient_0, SteamCDN_0, id_RimWorld
+    SteamClient_0 = SteamClient()
+    SteamCDN_0 = cdn.CDNClient(SteamClient_0)
+    id_RimWorld = 294100
+    wshopsearch(None)
+# https://steamcommunity.com/app/294100/workshop/
 
 
 if __name__ == "__main__":
@@ -45,22 +77,8 @@ if __name__ == "__main__":
         version="%(prog)s (version {version})".format(version=__version__))
 
     args = parser.parse_args()
-    main(args)
+    if args:
+        main(args)
+    else:
+        main()
 
-
-def wshopmod(query: str) -> str:
-    """
-    Query the workshop by fileid or url.
-    :type query: str
-    """
-    banner = None
-    return banner
-
-
-def wshopsearch(query: str) -> str:
-    """
-    Query the workshop by string.
-    :type query: str
-    """
-    banner = None
-    return banner
