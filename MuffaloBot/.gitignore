@@ -100,17 +100,11 @@ ENV/
 
 # project specific
 config.tomlbuild/
-dist/
 steamy.egg-info/
 *.pyc
 *.toml
 known_mods
-*.log
 *.sh
 *.cs
-build/
-dist/
-steamy.egg-info/
-*.pyc
 todo.txt
 
