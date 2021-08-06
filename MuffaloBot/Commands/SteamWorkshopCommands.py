@@ -13,11 +13,15 @@ from logzero import logger
 from steam.client import SteamClient, cdn
 
 from MuffaloBot.Data import constants
-from MuffaloBot.Modules import steam_workshop_discord
+from MuffaloBot.Modules.pmb_webhook import pmb_webhook_wshop
+
 
 def wshop_latest():
-    banner = None
-
+    """
+    Call the module to webhook post the most recent mods.
+    :return:
+    """
+    pmb_webhook_wshop.pmb_hook()
 
 
 def wshopmod(query: str) -> str:
