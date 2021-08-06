@@ -12,7 +12,12 @@ import argparse
 from logzero import logger
 from steam.client import SteamClient, cdn
 
-from ..Data import constants
+from MuffaloBot.Data import constants
+from MuffaloBot.Modules import steam_workshop_discord
+
+def wshop_latest():
+    banner = None
+
 
 
 def wshopmod(query: str) -> str:
